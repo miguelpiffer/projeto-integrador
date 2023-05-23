@@ -8,7 +8,7 @@ import math
 
 # Running real time from webcam
 cap = cv2.VideoCapture('/Users/miguelpiffer/Desktop/estudos/projeto integrador/videos/video1.mp4')
-model = YOLO('/Users/miguelpiffer/Desktop/estudos/projeto integrador/runs/detect/train5/weights/best.pt')
+model = YOLO('/Users/miguelpiffer/Desktop/estudos/projeto integrador/runs/detect/train7/weights/best.pt')
 
 
 # Reading the classes

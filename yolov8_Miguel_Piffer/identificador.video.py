@@ -6,7 +6,7 @@ import cv2
 
 VIDEOS_DIR = os.path.join('.', 'videos')
 
-video_path = os.path.join(VIDEOS_DIR, 'video2.mp4')
+video_path = os.path.join(VIDEOS_DIR, 'video3.mp4')
 video_path_out = '{}_out.mp4'.format(video_path)
 
 cap = cv2.VideoCapture(video_path)
@@ -14,12 +14,12 @@ ret, frame = cap.read()
 H, W, _ = frame.shape
 out = cv2.VideoWriter(video_path_out, cv2.VideoWriter_fourcc(*'MP4V'), int(cap.get(cv2.CAP_PROP_FPS)), (W, H))
 
-model_path = os.path.join('.', 'runs', 'detect', 'train', 'weights', '/Users/miguelpiffer/Desktop/estudos/projeto integrador/runs/detect/train5/weights/best.pt')
+model_path = os.path.join('.', 'runs', 'detect', 'train', 'weights', '/Users/miguelpiffer/Desktop/estudos/projeto integrador/runs/detect/train7/weights/best.pt')
 
 # Load a model
 model = YOLO(model_path)  # load a custom model
 
-threshold = 0.1
+threshold = 0.5
 
 class_name_dict = {0: 'amendoim'}
 
